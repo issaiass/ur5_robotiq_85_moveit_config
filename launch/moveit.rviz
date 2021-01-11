@@ -5,7 +5,9 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
-        - /MotionPlanning1/Planning Request1
+        - /TF1
+        - /TF1/Frames1
+        - /PointCloud21
       Splitter Ratio: 0.7425600290298462
     Tree Height: 266
   - Class: rviz/Help
@@ -138,6 +140,27 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          kinect2_base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          kinect2_ir_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          kinect2_ir_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          kinect2_rgb_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          kinect2_rgb_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           shoulder_link:
             Alpha: 1
             Show Axes: false
@@ -191,7 +214,7 @@ Visualization Manager:
         Colliding Link Color: 255; 0; 0
         Goal State Alpha: 1
         Goal State Color: 250; 128; 0
-        Interactive Marker Size: 0.20000000298023224
+        Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
         Planning Group: arm
         Query Goal State: true
@@ -280,6 +303,27 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          kinect2_base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          kinect2_ir_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          kinect2_ir_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          kinect2_rgb_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          kinect2_rgb_optical_frame:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           shoulder_link:
             Alpha: 1
             Show Axes: false
@@ -318,6 +362,133 @@ Visualization Manager:
         Show Robot Visual: true
       Value: true
       Velocity_Scaling_Factor: 0.1
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        base:
+          Value: false
+        base_link:
+          Value: true
+        ee_link:
+          Value: false
+        forearm_link:
+          Value: false
+        gripper_base_link:
+          Value: true
+        gripper_finger1_finger_link:
+          Value: false
+        gripper_finger1_finger_tip_link:
+          Value: false
+        gripper_finger1_inner_knuckle_link:
+          Value: false
+        gripper_finger1_knuckle_link:
+          Value: false
+        gripper_finger2_finger_link:
+          Value: false
+        gripper_finger2_finger_tip_link:
+          Value: false
+        gripper_finger2_inner_knuckle_link:
+          Value: false
+        gripper_finger2_knuckle_link:
+          Value: false
+        kinect2_base_link:
+          Value: true
+        kinect2_ir_link:
+          Value: false
+        kinect2_ir_optical_frame:
+          Value: false
+        kinect2_rgb_link:
+          Value: false
+        kinect2_rgb_optical_frame:
+          Value: false
+        shoulder_link:
+          Value: false
+        tool0:
+          Value: false
+        upper_arm_link:
+          Value: false
+        world:
+          Value: false
+        wrist_1_link:
+          Value: false
+        wrist_2_link:
+          Value: false
+        wrist_3_link:
+          Value: false
+      Marker Alpha: 1
+      Marker Scale: 0.5
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          base_link:
+            base:
+              {}
+            shoulder_link:
+              upper_arm_link:
+                forearm_link:
+                  wrist_1_link:
+                    wrist_2_link:
+                      wrist_3_link:
+                        ee_link:
+                          gripper_base_link:
+                            gripper_finger1_inner_knuckle_link:
+                              gripper_finger1_finger_tip_link:
+                                {}
+                            gripper_finger1_knuckle_link:
+                              gripper_finger1_finger_link:
+                                {}
+                            gripper_finger2_inner_knuckle_link:
+                              gripper_finger2_finger_tip_link:
+                                {}
+                            gripper_finger2_knuckle_link:
+                              gripper_finger2_finger_link:
+                                {}
+                        tool0:
+                          {}
+          kinect2_base_link:
+            kinect2_rgb_link:
+              kinect2_ir_link:
+                kinect2_ir_optical_frame:
+                  {}
+              kinect2_rgb_optical_frame:
+                {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 0.8342297077178955
+        Min Value: 0.01066577434539795
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: AxisColor
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /kinect_V2/depth_registered/points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -334,7 +505,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 2.996500015258789
+      Distance: 3.7588095664978027
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -350,9 +521,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: -0.030203023925423622
+      Pitch: 0.26479703187942505
       Target Frame: world
-      Yaw: 0.41676434874534607
+      Yaw: 5.109949588775635
     Saved: ~
 Window Geometry:
   Displays:
